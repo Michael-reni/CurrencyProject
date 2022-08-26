@@ -1,7 +1,8 @@
 version: '3'
 networks:
- currencyProject:
-
+ network1:
+  
+  
 services:
   nginx:
    image: webdevops/php-nginx:8.0
@@ -15,7 +16,8 @@ services:
    - ./laravel_project:/app
    - ./vhost_config/vhost.conf:/opt/docker/etc/nginx/vhost.conf
    networks:
-    - currencyProject
+    - network1
+
   mysql:
    image: mysql:8.0
    container_name: mysql_currency_project
@@ -27,12 +29,23 @@ services:
    - ./mysql_data:/var/lib/mysql
    environment:
       MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
-      MYSQL_USER: ${DB_USERNAME} 
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}   
    networks:
-    - currencyProject
+    - network1
+   
 
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin:5.0
+    restart: always
+    ports:
+      - 8081:80
+    networks:
+      - network1
+    environment:
+      - PMA_ARBITRARY=1
+
+  
 volumes:
   mysql_data:
     driver: local
