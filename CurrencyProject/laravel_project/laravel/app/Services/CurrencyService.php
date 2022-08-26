@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Log;
 
 class CurrencyService{
 
-    private static function  get_data_from_NBP_API(){
+    public static function  get_data_from_NBP_API(){
         $response = Http::acceptJson()->get('http://api.nbp.pl/api/exchangerates/tables/A/');
         if ($response->successful() ){ 
            $data = $response->json()[0]['rates'];
@@ -31,13 +31,26 @@ class CurrencyService{
 
     public function insert_data_to_database(){
 
-       $data =  CurrencyService::get_data_from_NBP_API();
+        $data = CurrencyService::get_data_from_NBP_API();
 
-       try{
-            Currency::insert($data);
-            Log::channel('currencyProject')->info(now()->toDateTimeString() . ' succes import');
-        } catch(\Exception $e){
-            Log::channel('currencyProject')->info(now()->toDateTimeString() . ' import failed messeage: ' . $e->getMessage());
-        } 
+        foreach($data as $d){
+            $currency = Currency::where('name',$d['name']);
+        if ($currency->exists()){
+            try {
+                $currency->update(['exchange_rate' => $d['exchange_rate'] ]);
+            }catch(\Exception $e){
+                Log::channel('currencyProject')->info(now()->toDateTimeString() . ' import failed messeage: ' . $e->getMessage());
+            } 
+        }
+        else{
+            try{
+                Currency::insert($data);
+                Log::channel('currencyProject')->info(now()->toDateTimeString() . ' succes import');
+            } catch(\Exception $e){
+                Log::channel('currencyProject')->info(now()->toDateTimeString() . ' import failed messeage: ' . $e->getMessage());
+            } 
+        }
+     
+    }
     }
 }
