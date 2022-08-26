@@ -1,1 +1,35 @@
 No scheduled commands are ready to run.
+No scheduled commands are ready to run.
+No scheduled commands are ready to run.
+No scheduled commands are ready to run.
+No scheduled commands are ready to run.
+No scheduled commands are ready to run.
+No scheduled commands are ready to run.
+No scheduled commands are ready to run.
+No scheduled commands are ready to run.
+No scheduled commands are ready to run.
+No scheduled commands are ready to run.
+No scheduled commands are ready to run.
+[2022-08-26T14:15:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:16:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:17:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:18:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:19:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:20:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:21:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:22:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:23:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:24:02+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:25:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:26:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:27:02+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:28:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:29:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:30:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:31:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:32:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:33:02+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:34:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:35:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:36:02+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
+[2022-08-26T14:37:01+00:00] Running scheduled command: App\Services\CurrencyService@insert_data_to_database
