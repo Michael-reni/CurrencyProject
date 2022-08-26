@@ -15,4 +15,4 @@
 8. php artisan migrate --path=database/migrations/currency_project
 ### Now aplication works. If you want to access database you can access container phpmyadmin in browser on localhost:8081 
 ### To login in phpmyadmin use 'mysql_currency_project' as SERWER 'root' as a user and DB_PASSWORD from .env as a password
-### You can also request this endpoint  http://127.0.0.1:8080/api/currency to get paginated data from the database
+
