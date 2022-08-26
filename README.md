@@ -1,7 +1,7 @@
 ### Open terminal. Every command that needs to be executed in terminal starts with a number and a dot
 ### Laravel project lies in laravel_project/laravel. I recommend to open it in some IDE like Visual Studio Code right now
 ### Create .env file from .env.example 
-### You can change DB_NAME and DB_PASSWORD but don't change value of DB_USERNAME, DB_HST, DB_PORT
+### You can change DB_NAME and DB_PASSWORD but don't change value of DB_USERNAME, DB_HOST, DB_PORT
 1. cd path/to/project/CurrencyProject
 2. docker-compose --env-file ./laravel_project/laravel/.env  up -d
 3. docker exec -it nginx_currency_project bash
