@@ -7,7 +7,7 @@
 3. docker exec -it nginx_currency_project bash
 ### Now we need to setup CRON entry
 4. crontab -e
-### Now click "i" to access insert mode and write this beneath comments "* * * * * cd app/laravel && /usr/local/bin/php artisan scheduler:run >> cron_file.txt"
+### Now click "i" to access insert mode and write this beneath comments "* * * * * cd app/laravel && /usr/local/bin/php artisan schedule:run >> cron_file.txt"
 ### Next click ESC to escape insert mode and write :wq to save cron tab entry
 5. cd app/laravel
 6. composer install
