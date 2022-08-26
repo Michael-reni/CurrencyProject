@@ -113,6 +113,11 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+        'currencyProject' =>[
+            'driver' => 'single',
+            'path' => storage_path('logs/bank_project_log'),
+            'level' => 'debug'
+        ],
     ],
 
 ];
