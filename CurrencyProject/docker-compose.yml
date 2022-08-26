@@ -1,0 +1,38 @@
+version: '3'
+networks:
+ currency_project:
+
+  services:
+  nginx:
+   image: webdevops/php-nginx:8.0
+   container_name: nginx_currency_project
+   restart: unless-stopped
+   depends_on:
+   - mysql
+   ports:
+   - "8080:80"
+   volumes:
+   - ./laravel_project:/app
+   - ./vhost_config/vhost.conf:/opt/docker/etc/nginx/vhost.conf
+   networks:
+    - currency_project
+  mysql:
+   image: mysql:8.0
+   container_name: mysql_currency_project
+   restart: unless-stopped
+   tty: true
+   ports:
+   - "3309:3306"
+   volumes:
+   - ./mysql_data:/var/lib/mysql
+   environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME} 
+   networks:
+    - currency_project
+
+volumes:
+  mysql_data:
+    driver: local
