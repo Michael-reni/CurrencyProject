@@ -1,8 +1,8 @@
 version: '3'
 networks:
- currency_project:
+ currencyProject:
 
-  services:
+services:
   nginx:
    image: webdevops/php-nginx:8.0
    container_name: nginx_currency_project
@@ -15,7 +15,7 @@ networks:
    - ./laravel_project:/app
    - ./vhost_config/vhost.conf:/opt/docker/etc/nginx/vhost.conf
    networks:
-    - currency_project
+    - currencyProject
   mysql:
    image: mysql:8.0
    container_name: mysql_currency_project
@@ -31,7 +31,7 @@ networks:
       MYSQL_PASSWORD: ${DB_PASSWORD}
       MYSQL_USER: ${DB_USERNAME} 
    networks:
-    - currency_project
+    - currencyProject
 
 volumes:
   mysql_data:
